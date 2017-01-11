@@ -22,6 +22,6 @@ setup(name='glue-h5part',
       author='Thomas Robitaille',
       author_email='thomas.robitaille@gmail.com',
       packages = find_packages(),
-      package_data={},
+      package_data={'glue_h5part':['h5part.ui']},
       entry_points=entry_points
     )
