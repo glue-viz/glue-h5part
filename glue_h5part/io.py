@@ -18,7 +18,10 @@ def read_step_to_data(filename, step_id=0):
     data = Data()
 
     for attribute in group:
-        data[attribute] = group[attribute].value
+        try:
+            data[attribute] = group[attribute].value
+        except AttributeError:
+            pass
 
     data.label = os.path.basename(filename.rsplit('.', 1)[0])
 
